@@ -2,13 +2,14 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: #f7f7f7;
-  font-family: arial;
-  margin: 0;
-  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
   display: grid;
   gap: 3.75rem;
   justify-items: center;
@@ -44,6 +45,8 @@ p {
 .menu {
   display: flex;
   gap: 1.25rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .menu a {
@@ -64,6 +67,7 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 62.5rem;
+  width: 100%;
 }
 
 .box_item {
@@ -75,6 +79,7 @@ p {
   align-content: center;
   gap: 1.25rem;
   justify-items: end;
+  overflow: hidden;
 }
 
 .box_item h1 {
@@ -103,6 +108,11 @@ p {
   background-color: #900;
 }
 
+.main_content_cover img {
+  object-fit: cover;
+  height: 100%;
+}
+
 .titulo_item_2 {
   color: #c6c6c6;
   font-size: 4rem;
@@ -125,6 +135,7 @@ p {
   padding: 2.5rem;
   align-self: center;
   background-image: url(../img/onda.svg);
+  /* word-break: break-all; */
 }
 
 .vantagens {
@@ -158,18 +169,33 @@ p {
   text-align: center;
 }
 
-/* cinza# Cores
+@media (max-width: 1000px) {
+  .main_content_vantagens {
+    grid-template-columns: 1fr;
+  }
+  .subtitulo {
+    text-align: center;
+  }
+}
 
-cinza-fundo: #f7f7f7
-cinza-texto: #c6c6c6
-vermelho: #
-
-# Tipografia
-
-fonte: Arial
-parágrafos: 20px
-Vantagens Bikcraft: 64px
-
-# Tamanhos
-
-conteúdo principal: máximo 1000px */
+@media (max-width: 600px) {
+  body {
+    gap: 1.875rem;
+    margin-top: 1.25rem;
+  }
+  .heade {
+    gap: 1.875rem;
+  }
+  .main_content {
+    grid-template-columns: 1fr;
+  }
+  .box_item {
+    justify-items: start;
+  }
+  .box_item::before {
+    display: none;
+  }
+  .subtitulo {
+    font-size: 3rem;
+  }
+}
