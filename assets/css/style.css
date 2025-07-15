@@ -1,10 +1,3 @@
-* {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 body {
   background-color: #f7f7f7;
   font-family: Arial, Helvetica, sans-serif;
@@ -63,14 +56,14 @@ p {
   border: 2px solid #e21;
 }
 
-.main_content {
+.main-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 62.5rem;
   width: 100%;
 }
 
-.box_item {
+.product-section {
   text-align: right;
   padding: 2.5rem;
   background-color: #fff;
@@ -82,11 +75,11 @@ p {
   overflow: hidden;
 }
 
-.box_item h1 {
+.product-section h1 {
   font-size: 2rem;
 }
 
-.box_item::before {
+.product-section::before {
   content: "";
   width: 3.75rem;
   height: 0.25rem;
@@ -96,7 +89,7 @@ p {
   right: -1.875rem;
 }
 
-.mais_informacoes {
+.more-informations {
   padding: 0.938rem 1.875rem;
   border-radius: 0.25rem;
   text-transform: uppercase;
@@ -104,30 +97,20 @@ p {
   color: #f7f7f7;
 }
 
-.mais_informacoes:hover {
+.more-informations:hover {
   background-color: #900;
 }
 
-.main_content_cover img {
+.main-content-cover img {
   object-fit: cover;
   height: 100%;
 }
 
-.titulo_item_2 {
-  color: #c6c6c6;
-  font-size: 4rem;
-  padding-top: 6.25rem;
-  text-align: right;
-}
-
-.box_item_3 {
-  padding: 3.75rem;
-}
-.titulo_caracteristica {
+.title-feature {
   font-weight: bold;
 }
 
-.subtitulo {
+.subtitle {
   font-size: 4rem;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.2);
@@ -138,27 +121,27 @@ p {
   /* word-break: break-all; */
 }
 
-.vantagens {
+.advantages {
   background-color: #fff;
   margin-top: 0.625rem;
 }
 
-.vantagens_item {
+.product-advantages {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 10px 20px;
   padding: 20px;
 }
 
-.vantagens_item:nth-child(odd) {
+.product-advantages:nth-child(odd) {
   background-color: #f7f7f7;
 }
 
-.vantagens_item:hover {
+.product-advantages:hover {
   border-left: 4px solid #e21;
 }
 
-.vantagens_item p {
+.product-advantages p {
   grid-column: 2;
 }
 
@@ -170,10 +153,10 @@ p {
 }
 
 @media (max-width: 1000px) {
-  .main_content_vantagens {
+  .main-content-advantages {
     grid-template-columns: 1fr;
   }
-  .subtitulo {
+  .subtitle {
     text-align: center;
   }
 }
@@ -186,16 +169,16 @@ p {
   .heade {
     gap: 1.875rem;
   }
-  .main_content {
+  .main-content {
     grid-template-columns: 1fr;
   }
-  .box_item {
+  .product-section {
     justify-items: start;
   }
-  .box_item::before {
+  .product-section::before {
     display: none;
   }
-  .subtitulo {
+  .subtitle {
     font-size: 3rem;
   }
 }
